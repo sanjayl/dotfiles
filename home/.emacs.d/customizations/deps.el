@@ -21,7 +21,9 @@
                       ido-vertical-mode
                       smex
 		      magit
-                      load-theme-buffer-local))
+                      load-theme-buffer-local
+                      align-cljlet
+                      multiple-cursors))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
