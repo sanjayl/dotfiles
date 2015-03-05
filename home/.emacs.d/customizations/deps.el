@@ -3,9 +3,9 @@
 
 (require 'package)
 
-(dolist (p '(("marmalade" . "http://marmalade-repo.org/packages/")
-	     ("tromey" . "http://tromey.com/elpa/")
-	     ("melpa" . "http://melpa.milkbox.net/packages/")))
+(dolist (p '(;("melpa-stable" . "http://stable.melpa.org/packages/")
+	     ;("tromey" . "http://tromey.com/elpa/")
+	     ("melpa" . "http://melpa.org/packages/")))
   (add-to-list 'package-archives p t))
 (package-initialize)
 
@@ -26,4 +26,4 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)
-    (message p)))
+    (message (prin1-to-string p))))
