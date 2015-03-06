@@ -130,3 +130,4 @@ buffer is not visiting a file."
 
 (global-set-key (kbd "<f11>") 'toggle-fullscreen)
 
+(global-set-key (kbd "C-|") 'align-cljlet)
