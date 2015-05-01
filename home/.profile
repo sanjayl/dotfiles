@@ -20,3 +20,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/sanjay/.gvm/bin/gvm-init.sh" ]] && source "/home/sanjay/.gvm/bin/gvm-init.sh"

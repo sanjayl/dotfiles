@@ -115,3 +115,5 @@ fi
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/sanjay/.gvm/bin/gvm-init.sh" ]] && source "/home/sanjay/.gvm/bin/gvm-init.sh"
