@@ -3,10 +3,10 @@
 
 (require 'package)
 
-(dolist (p '(;("melpa-stable" . "http://stable.melpa.org/packages/")
-	     ;("tromey" . "http://tromey.com/elpa/")
-	     ("melpa" . "http://melpa.org/packages/")))
+(dolist (p '(("tromey" . "http://tromey.com/elpa/")
+             ("melpa" . "http://melpa.org/packages/")))
   (add-to-list 'package-archives p t))
+
 (package-initialize)
 
 (when (not package-archive-contents)
