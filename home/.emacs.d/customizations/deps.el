@@ -23,7 +23,8 @@
 		      magit
                       load-theme-buffer-local
                       align-cljlet
-                      multiple-cursors))
+                      multiple-cursors
+                      highlight-symbol))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
