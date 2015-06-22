@@ -7,6 +7,7 @@
 (setq ido-enable-flex-matching t)
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode)
+(global-undo-tree-mode)
 
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)

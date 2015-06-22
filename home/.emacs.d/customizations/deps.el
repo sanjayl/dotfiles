@@ -24,7 +24,8 @@
                       load-theme-buffer-local
                       align-cljlet
                       multiple-cursors
-                      highlight-symbol))
+                      highlight-symbol
+                      undo-tree))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
