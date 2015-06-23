@@ -7,6 +7,7 @@
 (setq ido-enable-flex-matching t)
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode)
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 (global-undo-tree-mode)
 
 (smex-initialize)
@@ -139,3 +140,4 @@ buffer is not visiting a file."
 (global-set-key [f5] 'highlight-symbol)
 (global-set-key [(shift f5)] 'highlight-symbol-prev)
 (global-set-key [(meta f5)] 'highlight-symbol-query-replace)
+
