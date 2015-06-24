@@ -120,3 +120,6 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Uncomment if you want the Git prompt
+#source "$HOME/.bash_git_prompt"
