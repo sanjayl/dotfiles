@@ -25,7 +25,8 @@
                       align-cljlet
                       multiple-cursors
                       highlight-symbol
-                      undo-tree))
+                      undo-tree
+                      guide-key))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

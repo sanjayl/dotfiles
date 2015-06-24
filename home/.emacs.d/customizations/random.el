@@ -142,3 +142,6 @@ buffer is not visiting a file."
 (global-set-key [(meta f5)] 'highlight-symbol-query-replace)
 
 (setq magit-last-seen-setup-instructions "1.4.0")
+
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4"))
+(guide-key-mode 1)
