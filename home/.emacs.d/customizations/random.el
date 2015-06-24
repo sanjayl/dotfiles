@@ -143,5 +143,6 @@ buffer is not visiting a file."
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4"))
+(setq guide-key/guide-key-sequence '("C-x" "C-c"))
+(setq guide-key/recursive-key-sequence-flag t)
 (guide-key-mode 1)
