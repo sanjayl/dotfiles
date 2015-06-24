@@ -141,3 +141,4 @@ buffer is not visiting a file."
 (global-set-key [(shift f5)] 'highlight-symbol-prev)
 (global-set-key [(meta f5)] 'highlight-symbol-query-replace)
 
+(setq magit-last-seen-setup-instructions "1.4.0")
