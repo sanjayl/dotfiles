@@ -7,6 +7,7 @@
 (setq ido-enable-flex-matching t)
 (ido-ubiquitous-mode 1)
 (ido-vertical-mode)
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 (global-undo-tree-mode)
 
 (smex-initialize)
