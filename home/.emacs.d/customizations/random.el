@@ -147,3 +147,6 @@ buffer is not visiting a file."
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 (guide-key-mode 1)
+
+(global-set-key (kbd "C-,") 'ace-jump-mode)
+(global-set-key (kbd "C-<") 'ace-jump-char-mode)

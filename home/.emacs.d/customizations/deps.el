@@ -26,7 +26,8 @@
                       multiple-cursors
                       highlight-symbol
                       undo-tree
-                      guide-key))
+                      guide-key
+                      ace-jump-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
