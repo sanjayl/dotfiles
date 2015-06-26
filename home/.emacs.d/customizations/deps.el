@@ -27,7 +27,8 @@
                       highlight-symbol
                       undo-tree
                       guide-key
-                      ace-jump-mode))
+                      ace-jump-mode
+                      expand-region))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

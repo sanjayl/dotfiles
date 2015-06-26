@@ -150,3 +150,6 @@ buffer is not visiting a file."
 
 (global-set-key (kbd "C-,") 'ace-jump-mode)
 (global-set-key (kbd "C-<") 'ace-jump-char-mode)
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
