@@ -28,7 +28,8 @@
                       undo-tree
                       guide-key
                       ace-jump-mode
-                      expand-region))
+                      expand-region
+                      helm))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
