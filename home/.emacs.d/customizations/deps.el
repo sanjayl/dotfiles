@@ -29,7 +29,8 @@
                       guide-key
                       ace-jump-mode
                       expand-region
-                      helm))
+                      helm
+                      clj-refactor))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
