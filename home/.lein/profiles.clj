@@ -1,5 +1,7 @@
 {:user 
- {:plugins      [[cider/cider-nrepl "0.10.0-SNAPSHOT"]]
+ {:plugins      [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
+                 ;[refactor-nrepl "1.1.0"]  removed this, it launches the missles
+                 ]
   :dependencies [[org.clojure/tools.nrepl "0.2.10"]
                  [im.chit/vinyasa "0.3.4"]
                  [leiningen #=(leiningen.core.main/leiningen-version)]]
