@@ -191,3 +191,4 @@ buffer is not visiting a file."
 (helm-mode 1)
 
 (setq mouse-yank-at-point t)
+(setq magit-push-always-verify nil)

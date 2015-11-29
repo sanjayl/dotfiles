@@ -21,4 +21,9 @@
   "Edit the `user-init-file', in another window."
   (interactive)
   (find-file-other-window user-init-file))
+
+(defun open-dot-emacs-customization-file ()
+  (interactive)
+  (find-file-other-window (concat user-emacs-directory "customizations/random.el")))
+
 (put 'narrow-to-region 'disabled nil)
