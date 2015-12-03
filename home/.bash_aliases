@@ -22,6 +22,8 @@ alias cbcopy='xclip -i'
 alias clip-paste='xclip -o'
 alias clip-copy='xclip -i'
 
+alias web='python -m SimpleHTTPServer'
+
 #FUNCTIONS
 toggle_transparency() {
     BACKGR=`gconftool -g /apps/gnome-terminal/profiles/Default/background_type`
