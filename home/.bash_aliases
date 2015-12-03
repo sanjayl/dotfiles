@@ -7,7 +7,7 @@ alias lhs='ls -lhS'
 alias lhS='ls -lhSr'
 alias launch='xdg-open'
 alias open='xdg-open' #comment out on osx?
-alias tt='toggle_transparency'
+alias tt='toggle_transparency' #for trusty only??
 alias trim='sudo fstrim -v /'
 alias putclip='xclip -o'
 alias getclip='xclip -i'
@@ -15,6 +15,12 @@ alias getclip='xclip -i'
 #comment out on osx
 alias pbpaste='xclip -o'
 alias pbcopy='xclip -i'
+
+alias cbpaste='xclip -o'
+alias cbcopy='xclip -i'
+
+alias clip-paste='xclip -o'
+alias clip-copy='xclip -i'
 
 #FUNCTIONS
 toggle_transparency() {
