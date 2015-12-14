@@ -186,7 +186,8 @@ buffer is not visiting a file."
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;; turn off helm find file and go back to ido (I missed having the tab-key
+;(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 (helm-mode 1)
 
