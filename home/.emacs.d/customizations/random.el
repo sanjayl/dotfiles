@@ -194,3 +194,10 @@ buffer is not visiting a file."
 (setq mouse-yank-at-point t)
 (setq magit-push-always-verify nil)
 (global-set-key (kbd "C-c C-g") 'magit-status)
+
+
+(defun ido-my-keys ()
+  "changed what C-l does in the find file dialog, used to be refresh directory, now is cd .."
+  (define-key ido-file-dir-completion-map "\C-l" 'ido-up-directory))
+
+(add-hook 'ido-setup-hook 'ido-my-keys)
