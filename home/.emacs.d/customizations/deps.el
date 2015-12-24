@@ -30,7 +30,8 @@
                       ace-jump-mode
                       expand-region
                       helm
-                      clj-refactor))
+                      clj-refactor
+                      company))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

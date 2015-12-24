@@ -49,7 +49,7 @@
 
 ;(global-set-key "%" 'match-paren)  ;messes up with clj anon fns
 (global-set-key "\C-\M-j" 'switch-to-buffer)
-(global-set-key (kbd "C-.") 'hippie-expand)
+;;(global-set-key (kbd "C-.") 'hippie-expand)
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -201,3 +201,36 @@ buffer is not visiting a file."
   (define-key ido-file-dir-completion-map "\C-l" 'ido-up-directory))
 
 (add-hook 'ido-setup-hook 'ido-my-keys)
+
+(setq load-prefer-newer t)
+
+
+;;customizations for company-mode
+(global-company-mode)
+
+;;fix company mode color scheme to be better with tango-dark
+(require 'color)
+  
+(let ((bg (face-attribute 'default :background)))
+  (custom-set-faces
+   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   `(company-tooltip-common ((t (:inherit ido-subdir))))
+   `(company-tooltip-annotation ((t (:inherit font-lock-keyword-face))))
+   `(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
+   `(company-preview-common ((t (:inherit ido-subdir))))))
+
+(eval-after-load 'company
+  '(progn
+     (define-key company-active-map (kbd "C-j") 'company-select-next)
+     (define-key company-active-map (kbd "J") 'company-select-next)
+     (define-key company-active-map (kbd "C-n") 'company-select-next)
+     (define-key company-active-map (kbd "C-k") 'company-select-previous)
+     (define-key company-active-map (kbd "K") 'company-select-previous)
+     (define-key company-active-map (kbd "C-p") 'company-select-previous)
+     (setq company-idle-delay nil)
+     (global-set-key (kbd "C-.") 'company-complete)))
+
+
