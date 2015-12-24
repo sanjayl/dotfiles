@@ -219,7 +219,7 @@ buffer is not visiting a file."
    `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
    `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face :background ,(color-darken-name bg 5) :bold t))))
-   `(company-tooltip-common ((t (:inherit company-tooltip :underline t))))
+   `(company-tooltip-common ((t (:inherit company-tooltip))))
    `(company-tooltip-annotation ((t (:inherit company-tooltip :foreground ,(color-lighten-name bg 15)))))
    `(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
    `(company-preview-common ((t (:inherit ido-subdir))))))
