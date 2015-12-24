@@ -1,7 +1,6 @@
 {:user 
  {:plugins      [[cider/cider-nrepl "0.11.0-SNAPSHOT"]]
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/tools.nrepl "0.2.12"]
+  :dependencies [[org.clojure/tools.nrepl "0.2.12"]
                  [im.chit/vinyasa "0.3.4"]
                  [leiningen #=(leiningen.core.main/leiningen-version)]]
 
