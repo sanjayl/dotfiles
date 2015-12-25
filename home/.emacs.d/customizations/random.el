@@ -208,22 +208,6 @@ buffer is not visiting a file."
 ;;customizations for company-mode
 (global-company-mode)
 
-;;fix company mode color scheme to be better with tango-dark
-(require 'color)
-  
-(let ((bg (face-attribute 'default :background)))
-  (custom-set-faces
-   ;;   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 8)))))
-   ;;`(company-tooltip ((t (:inherit default :background "black"))))
-   `(company-tooltip ((t (:inherit default :background ,(color-darken-name bg 10) :foreground "salmon"))))
-   `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-   `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face :background ,(color-darken-name bg 5) :bold t))))
-   `(company-tooltip-common ((t (:inherit company-tooltip))))
-   `(company-tooltip-annotation ((t (:inherit company-tooltip :foreground ,(color-lighten-name bg 15)))))
-   `(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
-   `(company-preview-common ((t (:inherit ido-subdir))))))
-
 (eval-after-load 'company
   '(progn
      (define-key company-active-map (kbd "C-j") 'company-select-next)
@@ -236,3 +220,16 @@ buffer is not visiting a file."
      (global-set-key (kbd "C-.") 'company-complete)))
 
 
+;;fix company mode color scheme to be better with tango-dark
+;; (require 'color)
+  
+;; (let ((bg (face-attribute 'default :background)))
+;;   (custom-set-faces
+;;    `(company-tooltip ((t (:inherit default :background ,(color-darken-name bg 10) :foreground "salmon"))))
+;;    `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+;;    `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+;;    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face :background ,(color-darken-name bg 5) :bold t))))
+;;    `(company-tooltip-common ((t (:inherit company-tooltip))))
+;;    `(company-tooltip-annotation ((t (:inherit company-tooltip :foreground ,(color-lighten-name bg 15)))))
+;;    `(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
+;;    `(company-preview-common ((t (:inherit ido-subdir))))))
