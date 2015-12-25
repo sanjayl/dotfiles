@@ -216,7 +216,7 @@ buffer is not visiting a file."
      (define-key company-active-map (kbd "C-k") 'company-select-previous)
      (define-key company-active-map (kbd "K") 'company-select-previous)
      (define-key company-active-map (kbd "C-p") 'company-select-previous)
-     (setq company-idle-delay nil)
+     (setq company-idle-delay 0.5)
      (global-set-key (kbd "C-.") 'company-complete)))
 
 
