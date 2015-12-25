@@ -17,6 +17,7 @@
  '(company-tooltip-annotation ((t (:inherit company-tooltip :foreground "#515b5f"))))
  '(company-tooltip-common ((t (:inherit company-tooltip))))
  '(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
+ '(company-tooltip-mouse ((t (:background "salmon" :foreground "black"))))
  '(company-tooltip-selection ((t (:inherit font-lock-function-name-face :background "#222628" :bold t))))
  '(ido-subdir ((t (:foreground "salmon")))))
 
