@@ -245,6 +245,9 @@ buffer is not visiting a file."
       (setq ring-bell-function nil)
     (setq ring-bell-function #'subtle-visible-bell)))
 
-(if (string= (getenv "MOBAXTERM") "t")
+;; if running in linux, $DISPLAY=":0"
+;; if running in windows, $DISPLAY="w32"
+;; if running over SSH, $DISPLAY="LOCALHOST:11.0" or some such hostname
+(unless (string= ":" (substring (getenv "DISPLAY") 0 1)) 
     (toggle-bell))
 
