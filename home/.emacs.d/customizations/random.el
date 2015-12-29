@@ -233,3 +233,12 @@ buffer is not visiting a file."
 ;;    `(company-tooltip-annotation ((t (:inherit company-tooltip :foreground ,(color-lighten-name bg 15)))))
 ;;    `(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
 ;;    `(company-preview-common ((t (:inherit ido-subdir))))))
+
+
+(defun subtle-visible-bell ()
+  (progn (invert-face 'mode-line)
+         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
+
+(defun change-to-visible-bell ()
+  (interactive)
+  (setq ring-bell-function #'subtle-visible-bell))
