@@ -239,6 +239,10 @@ buffer is not visiting a file."
   (progn (invert-face 'mode-line)
          (run-with-timer 0.1 nil 'invert-face 'mode-line)))
 
-(defun change-to-visible-bell ()
+(defun toggle-bell ()
   (interactive)
-  (setq ring-bell-function #'subtle-visible-bell))
+  (if (eq ring-bell-function #'subtle-visible-bell)
+      (setq ring-bell-function nil)
+    (setq ring-bell-function #'subtle-visible-bell)))
+
+      
