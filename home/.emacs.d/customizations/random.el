@@ -245,4 +245,6 @@ buffer is not visiting a file."
       (setq ring-bell-function nil)
     (setq ring-bell-function #'subtle-visible-bell)))
 
-      
+(if (string= (getenv "MOBAXTERM") "t")
+    (toggle-bell))
+
