@@ -53,7 +53,6 @@
 (eval-after-load 'paredit
   '(define-key clojure-mode-map (kbd "C-c p") 'toggle-paredit-mode))
 
-
 ;; (require 'clj-refactor)
 
 ;; (defun my-clojure-mode-hook ()
