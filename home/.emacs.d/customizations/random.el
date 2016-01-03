@@ -50,7 +50,7 @@
 ;(global-set-key "%" 'match-paren)  ;messes up with clj anon fns
 (global-set-key "\C-\M-j" 'switch-to-buffer)
 ;;(global-set-key (kbd "C-.") 'hippie-expand)
-(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
