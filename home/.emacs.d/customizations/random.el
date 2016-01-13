@@ -50,7 +50,7 @@
 ;(global-set-key "%" 'match-paren)  ;messes up with clj anon fns
 (global-set-key "\C-\M-j" 'switch-to-buffer)
 ;;(global-set-key (kbd "C-.") 'hippie-expand)
-(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -235,3 +235,21 @@ buffer is not visiting a file."
 ;;    `(company-tooltip-annotation ((t (:inherit company-tooltip :foreground ,(color-lighten-name bg 15)))))
 ;;    `(company-tooltip-common-selection ((t (:inherit ido-incomplete-regexp))))
 ;;    `(company-preview-common ((t (:inherit ido-subdir))))))
+
+
+(defun subtle-visible-bell ()
+  (progn (invert-face 'mode-line)
+         (run-with-timer 0.1 nil 'invert-face 'mode-line)))
+
+(defun toggle-bell ()
+  (interactive)
+  (if (eq ring-bell-function #'subtle-visible-bell)
+      (setq ring-bell-function nil)
+    (setq ring-bell-function #'subtle-visible-bell)))
+
+;; if running in linux, $DISPLAY=":0"
+;; if running in windows, $DISPLAY="w32"
+;; if running over SSH, $DISPLAY="LOCALHOST:11.0" or some such hostname
+(unless (string= ":" (substring (getenv "DISPLAY") 0 1)) 
+    (toggle-bell))
+
