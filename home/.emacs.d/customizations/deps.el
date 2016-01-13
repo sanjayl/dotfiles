@@ -31,6 +31,7 @@
                       expand-region
                       helm
                       clj-refactor
+                      projectile
                       company))
 
 (dolist (p my-packages)

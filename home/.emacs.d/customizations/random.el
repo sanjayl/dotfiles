@@ -205,6 +205,8 @@ buffer is not visiting a file."
 (setq load-prefer-newer t)
 
 
+(projectile-global-mode)
+
 ;;customizations for company-mode
 (global-company-mode)
 
