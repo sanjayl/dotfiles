@@ -154,6 +154,7 @@ buffer is not visiting a file."
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+(winner-mode)
 
 ;;helm?
 (require 'helm)
