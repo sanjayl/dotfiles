@@ -15,6 +15,7 @@
 (defvar my-packages '(browse-kill-ring
                       clojure-mode
 		      clojure-mode-extra-font-locking
+                      clojars
 		      cider
                       paredit
 		      ido-ubiquitous
