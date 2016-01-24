@@ -254,3 +254,5 @@ buffer is not visiting a file."
 (unless (string= ":" (substring (getenv "DISPLAY") 0 1)) 
     (toggle-bell))
 
+;; Multiple cursors with CTRL-SHIFT
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
