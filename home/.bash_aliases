@@ -23,7 +23,7 @@ alias clip-paste='xclip -o'
 alias clip-copy='xclip -i'
 
 alias web='python -m SimpleHTTPServer'
-alias repl='java -jar ~/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar'
+alias repl='rlwrap java -jar ~/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar'
 
 #FUNCTIONS
 toggle_transparency() {
