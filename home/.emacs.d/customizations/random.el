@@ -194,7 +194,7 @@ buffer is not visiting a file."
 
 (setq mouse-yank-at-point t)
 (setq magit-push-always-verify nil)
-(global-set-key (kbd "C-c C-g") 'magit-status)
+(global-set-key (kbd "C-c g") 'magit-status)
 
 
 (defun ido-my-keys ()
