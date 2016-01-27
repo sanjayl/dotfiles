@@ -1,3 +1,10 @@
+;; Quick and dirty repl
+;; maybe move this to inf-clojure?
+;; http://batsov.com/articles/2014/12/04/introducing-inf-clojure-a-better-basic-clojure-repl-for-emacs/
+(defun clj-repl () (interactive)
+       (pop-to-buffer (make-comint "clj-repl" "java" nil "-jar" "/home/sanjay/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar")))
+
+
 ;;;;
 ;; Cider
 ;;;;
