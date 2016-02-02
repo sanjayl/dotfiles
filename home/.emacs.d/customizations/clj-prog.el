@@ -57,8 +57,8 @@
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
 
-(eval-after-load 'paredit
-  '(define-key clojure-mode-map (kbd "C-c p") 'toggle-paredit-mode))
+;;(eval-after-load 'paredit
+;;  '(define-key clojure-mode-map (kbd "C-c p") 'toggle-paredit-mode))
 
 ;; (require 'clj-refactor)
 
