@@ -33,7 +33,8 @@
                       helm
                       clj-refactor
                       projectile
-                      company))
+                      company
+                      aggressive-indent))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
