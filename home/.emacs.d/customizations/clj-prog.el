@@ -68,3 +68,5 @@
 ;;     (cljr-add-keybindings-with-prefix "C-c M-r"))
 
 ;; (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
