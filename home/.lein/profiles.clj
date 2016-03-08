@@ -1,7 +1,5 @@
 {:repl
- {;:plugins      [[cider/cider-nrepl "0.12.0-SNAPSHOT"]]
-  :dependencies [;[org.clojure/tools.nrepl "0.2.12"]
-                 [im.chit/vinyasa "0.3.4"]
+ {:dependencies [[im.chit/vinyasa "0.3.4"]
                  [leiningen #=(leiningen.core.main/leiningen-version)]]
 
   :injections   [(require '[vinyasa.inject :as inject])
@@ -15,4 +13,8 @@
                             clojure.core > ;; core ns with > prefix
                             [clojure.java.shell sh]
                             [clojure.pprint [pprint >p]]
-                            [clojure.pprint [pprint >P]])]}}
+                            [clojure.pprint [pprint >P]])]}
+ :cider
+ {:plugins      [[refactor-nrepl "2.2.0-SNAPSHOT"]
+                 [cider/cider-nrepl "0.12.0-SNAPSHOT"]]
+  :dependencies [[org.clojure/tools.nrepl "0.2.12"]]}}
