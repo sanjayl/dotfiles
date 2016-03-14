@@ -256,3 +256,6 @@ buffer is not visiting a file."
 
 ;; Multiple cursors with CTRL-SHIFT
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+
+(add-to-list 'load-path "~/.emacs.d/snippets")
+(yas-global-mode 1)

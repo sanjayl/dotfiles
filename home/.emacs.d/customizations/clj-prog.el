@@ -55,18 +55,19 @@
      (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
      (define-key clojure-mode-map (kbd "M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
-     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
+     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)
+     (define-key cider-mode-map (kbd "C-c s") 'cider-scratch)))
 
 ;;(eval-after-load 'paredit
 ;;  '(define-key clojure-mode-map (kbd "C-c p") 'toggle-paredit-mode))
 
-;; (require 'clj-refactor)
+(require 'clj-refactor)
 
-;; (defun my-clojure-mode-hook ()
-;;     (clj-refactor-mode 1)
-;;     (yas-minor-mode 1) ; for adding require/use/import
-;;     (cljr-add-keybindings-with-prefix "C-c M-r"))
+(defun my-clojure-mode-hook ()
+     (clj-refactor-mode 1)
+     ;(yas-minor-mode 1) ; for adding require/use/import
+     (cljr-add-keybindings-with-prefix "C-c r"))
 
-;; (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
