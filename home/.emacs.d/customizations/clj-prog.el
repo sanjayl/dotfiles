@@ -9,8 +9,6 @@
 ;; Cider
 ;;;;
 
-;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
 (setq cider-repl-pop-to-buffer-on-connect t)
@@ -25,9 +23,6 @@
 ;; Wrap when navigating history.
 (setq cider-repl-wrap-history t)
 
-;; enable paredit in your clj and REPL
-(add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
 
 (defun toggle-paredit-mode ()
   (interactive)
@@ -58,9 +53,6 @@
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c s") 'cider-scratch)))
 
-;;(eval-after-load 'paredit
-;;  '(define-key clojure-mode-map (kbd "C-c p") 'toggle-paredit-mode))
-
 (require 'clj-refactor)
 
 (defun my-clojure-mode-hook ()
@@ -69,5 +61,30 @@
      (cljr-add-keybindings-with-prefix "C-c r"))
 
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
-
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
+;; provides minibuffer documentation for the code you're typing into the repl
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;; enable paredit in your clj and REPL
+(add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+
+
+(defun update-cider-scratch-header ()
+  (interactive)
+  (when (eq major-mode 'cider-clojure-interaction-mode)
+    (let* ((ww (window-width))
+           (ns (concat "[" (cider-current-ns) "]"))
+           (ns-len (length ns))
+           (mid-point (/ (- ww ns-len) 2))
+           (padding (make-string mid-point ? )))
+      (setq header-line-format (propertize (concat padding ns) 'face 'error)))))
+
+(add-hook 'buffer-list-update-hook #'update-cider-scratch-header)
+
+
+(defun my-scratch ()
+  (interactive)
+  (with-current-buffer (get-buffer-create "*my scratch*")
+    (cider-clojure-interaction-mode)
+    (switch-to-buffer (current-buffer))))
