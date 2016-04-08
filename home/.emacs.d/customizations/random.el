@@ -259,8 +259,9 @@ buffer is not visiting a file."
 ;; if running in linux, $DISPLAY=":0"
 ;; if running in windows, $DISPLAY="w32"
 ;; if running over SSH, $DISPLAY="LOCALHOST:11.0" or some such hostname
-(unless (string= ":" (substring (getenv "DISPLAY") 0 1)) 
-    (toggle-bell))
+(when (getenv "DISPLAY")
+  (unless (string= ":" (substring (getenv "DISPLAY") 0 1))
+    (toggle-bell)))
 
 ;; Multiple cursors with CTRL-SHIFT
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
