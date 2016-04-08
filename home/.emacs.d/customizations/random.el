@@ -91,8 +91,15 @@ buffer is not visiting a file."
         try-complete-lisp-symbol-partially
         try-complete-lisp-symbol))
 
+(defun my-lisp-mode-customizations ()
+  (interactive)
+  (define-key lisp-mode-shared-map (kbd "C-c C-c") 'eval-defun)
+  (define-key lisp-mode-shared-map (kbd "M-.") 'find-function-at-point))
+
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+(add-hook 'lisp-interaction-mode-hook 'paredit-mode)
+(add-hook 'lisp-interaction-mode-hook 'my-lisp-mode-customizations)
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
