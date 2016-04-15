@@ -6,7 +6,8 @@
  '(inhibit-startup-screen t)
  '(safe-local-variable-values
    (quote
-    ((bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)"))))
+    ((checkdoc-package-keywords-flag)
+     (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)"))))
  '(vc-follow-symlinks t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -15,6 +15,6 @@
  ;;                            [clojure.pprint [pprint >p]]
  ;;                            [clojure.pprint [pprint >P]])]}
  :cider
- {:plugins      [;;[refactor-nrepl "2.2.0-SNAPSHOT"]
+ {:plugins      [[refactor-nrepl "2.3.0-SNAPSHOT"]
                  [cider/cider-nrepl "0.12.0-SNAPSHOT"]]
   :dependencies [[org.clojure/tools.nrepl "0.2.12"]]}}

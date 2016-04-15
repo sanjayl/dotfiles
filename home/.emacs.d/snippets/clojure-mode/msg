@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: msg
+# key: msg
+# --
+(require '[cider.nrepl.test-session :as session])
+(defn msg [x] (session/session-fixture #(session/message x)))
