@@ -18,7 +18,8 @@
                       clojars
 		      cider
                       paredit
-		      ido-ubiquitous
+					;ido-ubiquitous
+		      ido-completing-read+
                       ido-vertical-mode
                       smex
 		      magit
